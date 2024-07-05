@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dribbble Clone</title>
+<style>
+body {
+  font-family: monospace;
+  margin: 0;
+  background-color: gainsboro;
+}
+
+header {
+  background-color: #333;
+  color:#333;
+  padding: 1em;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2em;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  font-family: cursive;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.nav-links li {
+  margin-right: 1em;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 0.5em;
+  border: none;
+  border-radius: 5px;
+}
+
+.search-bar button {
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+}
+
+.hero {
+  background-color:grey;
+  padding: 10px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2em;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+.hero button {
+  padding: 0.8em 1.5em;
+  border: none;
+  border-radius: 5px;
+  background-color:green;
+  color: #fff;
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2em;
+}
+
+.card {
+  width: 200px;
+  margin: 1em;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  position: relative; /* For the overlay */
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1em;
+}
+
+.card-title {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.card-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #888;
+  font-size: 0.8em;
+}
+
+.card-stats i {
+  margin-right: 0.5em;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay-text {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.pagination button {
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  margin: 0 0.5em;
+}
+
+.pagination button.active {
+  background-color: #fff;
+  color: #333;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+  
+}
+.one{
+  color: #333;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#" class="logo">Dribbble</a>
+    <ul class="nav-links">
+      <li><a href="#">Shots</a></li>
+      <li><a href="#">Designers</a></li>
+      <li><a href="#">Teams</a></li>
+      <li><a href="#">Community</a></li>
+      <li><a href="#">Jobs</a></li>
+      <li><a href="#">...</a></li>
+    </ul>
+    <div class="search-bar">
+      <input type="text" placeholder="Search">
+      <button>Search</button>
+    </div>
+    <div class=>
+      <button>Sign up</button>
+      <button>Sign in</button>
+    </div>
+  
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>What are you working on?</h1>
+  <p>Dribbble is show and tell for designers.</p>
+  <button>Learn more</button>
+  <button>Sign up</button>
+</div>
+<div class="two">
+      
+  
+  
+
+</div>
+
+<div class="content">
+  <div class="card">
+    <img src="/img/fam.jpg">
+    <div class="card-content">
+      <h2 class="card-title">Famous</h2>
+      <div class="card-stats">
+        <i class="fas fa-eye"></i> 4,044
+        <i class="fas fa-comments"></i> 14
+        <i class="fas fa-heart"></i> 290
+      </div>
+    </div>
+    <div class="overlay">
+      <p class="overlay-text">View Project</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="/img/balb.png">
+    <div class="card-content">
+      <h2 class="card-title">Balkan Brothers</h2>
+      <div class="card-stats">
+        <i class="fas fa-eye"></i> 2,404
+        <i class="fas fa-comments"></i> 13
+        <i class="fas fa-heart"></i> 236
+      </div>
+    </div>
+    <div class="overlay">
+      <p class="overlay-text">View Project</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="./img/jan.jpg">
+    <div class="card-content">
+      <h2 class="card-title">Jan Losert</h2>
+      <div class="card-stats">
+        <i class="fas fa-eye"></i> 3,985
+        <i class="fas fa-comments"></i> 17
+        <i class="fas fa-heart"></i> 264
+      </div>
+    </div>
+    <div class="overlay">
+      <p class="overlay-text">View Project</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="/img/matti.png" alt="Card Image">
+    <div class="card-content">
+      <h2 class="card-title">Mattias Johansson</h2>
+      <div class="card-stats">
+        <i class="fas fa-eye"></i> 2,602
+        <i class="fas fa-comments"></i> 23
+        <i class="fas fa-heart"></i> 186
+      </div>
+    </div>
+    <div class="overlay">
+      <p class="overlay-text">View Project</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="/img/ruslan.jpg">
+    <div class="card-content">
+      <h2 class="card-title">Ruslan Siiz</h2>
+      <div class="card-stats">
+        <i class="fas fa-eye"></i> 2,369
+        <i class="fas fa-comments"></i> 8
+        <i class="fas fa-heart"></i> 178
+      </div>
+    </div>
+    <div class="overlay">
+      <p class="overlay-text">View Project</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="/img/pp.png">
+    <div class="card-content">
+      <h2 class="card-title">Paperpillar</h2>
+      <div class="card-stats">
+        <i class="fas fa-eye"></i> 2,025
+        <i class="fas fa-comments"></i> 6
+        <i class="fas fa-heart"></i> 160
+      </div>
+    </div>
+    <div class="overlay">
+      <p class="overlay-text">View Project</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="img/alfrey.png">
+    <div class="card-content">
+      <h2 class="card-title">Alfrey Davilla | vaneltia</h2>
+      <div class="card-stats">
+        <i class="fas fa-eye"></i> 1,841
+        <i class="fas fa-comments"></i> 6
+      
+      
+        <i class="fas fa-heart"></i> 158
+      </div>
+    </div>
+    <div class="overlay">
+      <p class="overlay-text">View Project</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="/img/made.jpg">
+    <div class="card-content">
+      <h2 class="card-title">A Studio-JQ A</h2>
+      <div class="card-stats">
+        <i class="fas fa-eye"></i> 2,179
+        <i class="fas fa-comments"></i> 4
+        <i class="fas fa-heart"></i> 158
+      </div>
+    </div>
+    <div class="overlay">
+      <p class="overlay-text">View Project</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="/img/rom.jpg">
+    <div class="card-content">
+      <h2 class="card-title">Romain Trystram</h2>
+      <div class="card-stats">
+        <i class="fas fa-eye"></i> 1,872
+        <i class="fas fa-comments"></i> 8
+        <i class="fas fa-heart"></i> 148
+      </div>
+    </div>
+    <div class="overlay">
+      <p class="overlay-text">View Project</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="/img/infull.jpg">
+    <div class="card-content">
+      <h2 class="card-title">inFullMobile</h2>
+      <div class="card-stats">
+        <i class="fas fa-eye"></i> 2,167
+        <i class="fas fa-comments"></i> 9
+        <i class="fas fa-heart"></i> 134
+      </div>
+    </div>
+    <div class="overlay">
+      <p class="overlay-text">View Project</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="/img/four.png">
+    <div class="card-content">
+      <h2 class="card-title">FourPlus Studio</h2>
+      <div class="card-stats">
+        <i class="fas fa-eye"></i> 1,371
+        <i class="fas fa-comments"></i> 9
+        <i class="fas fa-heart"></i> 127
+      </div>
+    </div>
+    <div class="overlay">
+      <p class="overlay-text">View Project</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="/img/muti.PNG">
+    <div class="card-content">
+      <h2 class="card-title">MUTI</h2>
+      <div class="card-stats">
+        <i class="fas fa-eye"></i> 728
+        <i class="fas fa-comments"></i> 3
+        <i class="fas fa-heart"></i> 118
+      </div>
+    </div>
+    <div class="overlay">
+      <p class="overlay-text">View Project</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="img/i1.jpg">
+    <div class="card-content">
+      <h2 class="card-title"></h2>
+      <div class="card-stats">
+        <i class="fas fa-eye"></i> 1,027
+        <i class="fas fa-comments"></i> 6
+        <i class="fas fa-heart"></i> 129
+      </div>
+    </div>
+    <div class="overlay">
+      <p class="overlay-text">View Project</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="img/i2.png">
+    <div class="card-content">
+      <h2 class="card-title"></h2>
+      <div class="card-stats">
+        <i class="fas fa-eye"></i> 1,553
+        <i class="fas fa-comments"></i> 9
+        <i class="fas fa-heart"></i> 112
+      </div>
+    </div>
+    <div class="overlay">
+      <p class="overlay-text">View Project</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="img/i3.png">
+    <div class="card-content">
+      <h2 class="card-title"></h2>
+      <div class="card-stats">
+        <i class="fas fa-eye"></i> 940
+        <i class="fas fa-comments"></i> 9
+        <i class="fas fa-heart"></i> 107
+      </div>
+    </div>
+    <div class="overlay">
+      <p class="overlay-text">View Project</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="img/i4.jpg">
+    <div class="card-content">
+      <h2 class="card-title"></h2>
+      <div class="card-stats">
+        <i class="fas fa-eye"></i> 1,177
+        <i class="fas fa-comments"></i> 4
+        <i class="fas fa-heart"></i> 102
+      </div>
+    </div>
+    <div class="overlay">
+      <p class="overlay-text">View Project</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="/img/i5.jpg">
+    <div class="card-content">
+      <h2 class="card-title"></h2>
+      <div class="card-stats">
+        <i class="fas fa-eye"></i> 1,100
+        <i class="fas fa-comments"></i> 6
+        <i class="fas fa-heart"></i> 93
+      </div>
+    </div>
+    <div class="overlay">
+      <p class="overlay-text">View Project</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="/img/i6.png">
+    <div class="card-content">
+      <h2 class="card-title"></h2>
+      <div class="card-stats">
+        <i class="fas fa-eye"></i> 1,445
+        <i class="fas fa-comments"></i> 5
+        <i class="fas fa-heart"></i> 101
+      </div>
+    </div>
+    <div class="overlay">
+      <p class="overlay-text">View Project</p>
+    </div>
+  </div>
+</div>
+
+<div class="pagination">
+  <button class="active">1</button>
+  <button>2</button>
+  <button>3</button>
+  <button>4</button>
+  <button>5</button>
+</div>
+
+<footer class="footer">
+  <p>&copy; 2023 Dribbble</p>
+</footer>
+
+<script src="https://kit.fontawesome.com/your-fontawesome-kit-id.js" crossorigin="anonymous"></script>
+</body>
+</html>
